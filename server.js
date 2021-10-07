@@ -2,14 +2,14 @@ const express = require("express");
 const conMongo = require("./server/connect");
 const morgan = require("morgan");
 const route = require("./server/routes");
-const schedule = require("node-schedule");
+require("./schedule");
 conMongo();
 
 const startTime = new Date(Date.now() + 1000);
 
-schedule.scheduleJob({ start: startTime, rule: "*/1 * * * * *" }, function () {
-  console.log("Time for tea!");
-});
+// schedule.scheduleJob({ start: startTime, rule: "*/1 * * * * *" }, function () {
+//   console.log("Time for tea!");
+// });
 
 const app = express();
 const PORT = 3000;

@@ -1,0 +1,1 @@
+{"level":"error","message":"Server Error or data is not defined","service":"fetch-info","stack":"Error: Server Error or data is not defined\n    at C:\\Users\\USER\\Desktop\\BE-Challenge\\server\\routes.js:63:18\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","timestamp":"21:10:07"}

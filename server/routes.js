@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const Axios = require("axios");
 const DataCovid = require("./model");
-
 router.get("/", async (req, res) => {
   const data = await DataCovid.find();
   res.json({
@@ -11,7 +10,6 @@ router.get("/", async (req, res) => {
 
 router.get("/fetch", async (req, res) => {
   try {
-    const findData = await DataCovid().findOne();
     let confirm = 0;
     let death = 0;
     let recovery = 0;
@@ -44,7 +42,7 @@ router.get("/fetch", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       message: "API Error",
-      error,
+      error: error.message,
     });
   }
 });

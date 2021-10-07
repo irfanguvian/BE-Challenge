@@ -10,6 +10,10 @@ var schema = new mongoose.Schema({
   death: {
     type: Number,
   },
+  timestamp: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 const data = mongoose.model("Data Covid", schema);
